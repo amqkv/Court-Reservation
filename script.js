@@ -26,11 +26,12 @@ const Time = {
   ELEVEN_PM: "23:00 - 00:00",
 };
 
-const COURT_NUMBER = 2;
+// ndoe script.js YYYY-MM-DD 3 EIGHT_AM
+const DATE = process.argv[2];
+const COURT_NUMBER = process.argv[3];
+const TIME = Time[process.argv[4]];
 
 const NOM_DU_PLATEAU = Name.COMPLEXE_SPORTIF_ST_LAU;
-const TIME = Time.SIX_AM;
-const DATE = "2025-04-07";
 
 (async () => {
   const browser = await puppeteer.launch({

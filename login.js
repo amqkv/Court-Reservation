@@ -31,6 +31,7 @@ const DATE = "2025-04-07";
     await page.waitForSelector("#u2000_btnAcceptCookieUse");
     await page.click("#u2000_btnAcceptCookieUse");
   }
+  console.log("Successfully logged in 🧚‍♀️");
   //////////////////////////////////////////////////////////////////////////////////////////
 
   //   // SELECTING COURTS
