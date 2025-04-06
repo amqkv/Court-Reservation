@@ -26,12 +26,12 @@ const Time = {
   ELEVEN_PM: "23:00 - 00:00",
 };
 
-// ndoe script.js YYYY-MM-DD 3 EIGHT_AM
+// node script.js YYYY-MM-DD 3 EIGHT_AM
 const DATE = process.argv[2];
 const COURT_NUMBER = process.argv[3];
 const TIME = Time[process.argv[4]];
 
-const NOM_DU_PLATEAU = Name.COMPLEXE_SPORTIF_ST_LAU;
+const NOM_DU_PLATEAU = Name.CCR;
 
 (async () => {
   const browser = await puppeteer.launch({
@@ -81,8 +81,8 @@ const NOM_DU_PLATEAU = Name.COMPLEXE_SPORTIF_ST_LAU;
         const selectPersonBtn = await page.waitForSelector("#u3600_btnSelect0");
         await selectPersonBtn.click("#u3600_btnSelect0");
 
-        const addToCardBtn = await page.waitForSelector("#u3600_btnCheckout0");
-        addToCardBtn.click("#u3600_btnSelect0");
+        // const addToCardBtn = await page.waitForSelector("#u3600_btnCheckout0");
+        // addToCardBtn.click("#u3600_btnSelect0");
         console.log("done");
       } else {
         console.log("No button found in last <td>!");
